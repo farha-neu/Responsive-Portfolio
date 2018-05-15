@@ -28,12 +28,10 @@ html,body{
 .main-header{
     background-color: #ffffff;
     border-bottom: 1px solid #cccccc;
-    /*height: 75px; */
     width:100%;
     position: fixed;
     overflow: auto;
     z-index: 99;
-    
 }
 
 .heading{
@@ -77,18 +75,18 @@ nav a{
     color: #cccccc;
 }
 
-
 nav a:hover{
     color: dimgrey;
     font-weight: bold;
 } 
+
 .wrapper{
+    font-size: 16px;
     clear: both;
     max-width: 960px;
     width:100%;
     margin: 0 auto;
-    /* padding: 25px; */
-    margin-top: 130px;
+    margin-top: 108px;
     margin-bottom: 30px;   
     overflow: auto; 
 }
@@ -111,6 +109,7 @@ nav a:hover{
 .main-content a{
     color: #777777
 }
+
 .main-content p a:hover{
     font-weight: bold;
 }
@@ -120,7 +119,7 @@ nav a:hover{
     flex-wrap: wrap;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create 3 equal columns that sits next to each other */
 .column {
     flex: 33.33%;
     max-width: 33.33%;
@@ -136,7 +135,7 @@ nav a:hover{
 
 h1 {
     display: block;
-    font-size: 2em;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -151,6 +150,10 @@ h1, .project-info{
     border-bottom: 2px solid #dddddd;
 }
 
+.container p{
+    text-align: justify;
+}
+
 #bio-image{
     width: 250px;
     float: left;
@@ -158,14 +161,11 @@ h1, .project-info{
     margin-top:8px;
 }
 
-.container p{
-    text-align: justify;
-}
 
 input[type=text], input[type=email],textarea{
     width: 100%;
     padding: 12px 20px;
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -181,11 +181,12 @@ textarea{
 input[type=submit] {
     background-color:#4aaaa5;
     color: white;
-    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    height: 40px;
+    width:90px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -193,19 +194,12 @@ input[type=submit] {
     opacity: 1; /* Firefox */
 }
 
-
+/* Portfolio images */
 .column img:hover{
     box-shadow: 5px 10px #cccccc;
 } 
 
-/* .project img{
-    height: 210px;
-    width: 250px;
-} */
-
-
 .project-info{
-    /* width: 100%; */
     position: absolute;
     bottom: 50px;
     right: 20px;
@@ -232,10 +226,12 @@ footer{
     bottom:0;
     width: 100%;
 }
+
 .connect-container{
   height: 25px;
   padding: 0px;
 }
+
 .connect{
     font-size:25px;
     color: white;
@@ -244,13 +240,8 @@ footer{
 
 
 
-
-
-@media screen and (max-width: 768px) {
-    body {
-      background-color: #333;
-    }
-  
+/* Media Queries */
+@media screen and (max-width: 768px) { 
     .wrapper {
       width: 100%;
       padding-left:25px;
@@ -261,6 +252,7 @@ footer{
       padding-right:25px;
     }
 
+    /* Make 2 equal columns for portfolio */
     .column{
         flex: 50%;
         max-width: 50%;
@@ -268,20 +260,19 @@ footer{
   }
 
   @media screen and (max-width: 640px) {
-    body {
-      background-color:salmon;
-    }
-  
     .wrapper {
       width: 100%;
       margin-top:20px;
-      /* padding-top:50px; */
+ 
     }
+
+    /* Sticky Header */
     .main-header{
         position: static;
         margin:0;
         padding: 0;
     }
+    /* Full width image */
     #bio-image{
         width:100%;
         padding-bottom:20px;
@@ -301,12 +292,9 @@ footer{
         width:100%;
         display: block;
     }
-
+    /* One column */
     .column{
         flex: 100%;
         max-width: 100%;
     }
-
-
-
   }
