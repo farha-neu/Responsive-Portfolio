@@ -1,2 +1,2 @@
 # Responsive-Portfolio
-Live Preview: https://farha-neu.github.io/Responsive-Portfolio/  
+Live Preview: https://farhajawed.github.io/Responsive-Portfolio/  
